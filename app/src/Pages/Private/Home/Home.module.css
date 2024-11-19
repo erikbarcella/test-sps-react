@@ -1,0 +1,28 @@
+.main {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.container2 {
+    display: flex;
+    /* Usar flexbox para layout */
+    align-items: flex-start;
+    /* Alinhar os itens no início verticalmente */
+}
+
+.sidemenu {
+    flex: 0 0 auto;
+    /* O menu não deve crescer ou encolher */
+}
+
+.content{
+    flex: 1;
+    /* O conteúdo da Home deve ocupar todo o espaço disponível na largura */
+    padding: 20px;
+    /* Espaçamento interno para o conteúdo da Home */
+}
+
+
+
