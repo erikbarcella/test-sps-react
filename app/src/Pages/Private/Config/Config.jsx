@@ -32,7 +32,7 @@ export function Config() {
       } catch (err) {
         if (err.response && err.response.status === 401) {
           logout();
-          return alert("Token expirado. Faça login novamente.");
+           setAlert("Token expirado. Faça login novamente.");
         }
       } finally {
         setLoading(false);
@@ -61,12 +61,12 @@ export function Config() {
     try {
       const response = await api.delete(`/users/${email}`);
       if (response.data.error) {
-        alert("erro ao excluir usuario");
+        setAlert("erro ao excluir usuario");
       }
-      alert(`usuario excluido com sucesso`);
+      setAlert(`usuario excluido com sucesso`);
       setUsers((prevUsers) => prevUsers.filter((user) => user.email !== email));
     } catch (error) {
-       alert("erro ao excluir usuario");
+       setAlert("erro ao excluir usuario");
     }
   };
 
